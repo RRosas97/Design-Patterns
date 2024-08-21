@@ -5,11 +5,11 @@ import {ExternalNotificationService} from './ExternalNotificationService';
 
 export class BillingService {
     private notificationManager: NotificationManager;
-    private externalService:ExternalNotificationService
+    
 
     constructor() {
         this.notificationManager = NotificationManager.getSingleInstance();
-        this.externalService = new ExternalNotificationService();
+        
     }
 
     public notifyPaymentDue(studentEmail: string): void {
