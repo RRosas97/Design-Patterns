@@ -17,11 +17,13 @@ import { CourseBuilder } from './CourseBuilder';
 const basicCourse = new CourseBuilder()
 .setName('Introducción a TypeScript')
 .setInstructor({ name: 'Alice', email: 'alice@example.com', experience: 5 })
+.setCustomMethod((message:string)=>{console.log('Se agregó funcionalidad extra '+ message)})
 .BuildCourse();
 
 console.log('Curso 1:');
 basicCourse.displayCourseInfo();
 console.log('*****************************************');
+basicCourse.addExtraBehaviour('Extra mensaje: Este curso es sabatino');
 
 const advancedCourse = new CourseBuilder().setName('TypeScript Avanzado')
 .setDescription('Un curso avanzado sobre TypeScript')
