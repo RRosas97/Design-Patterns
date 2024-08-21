@@ -1,16 +1,13 @@
 
 import { UIManager } from './UIManager';
+import { UIFactory } from './UIFactory';
+import { AdminUIFactory } from './AdminUIFactory';
 
-const uiManager = new UIManager();
+
+const uiFactory = new AdminUIFactory(); 
+const uiManager = new UIManager(uiFactory);
 
 const adminUI = uiManager.createUI('admin');
 adminUI.button.render();
 adminUI.dialog.show();
 
-const instructorUI = uiManager.createUI('instructor');
-instructorUI.button.render();
-instructorUI.dialog.show();
-
-const studentUI = uiManager.createUI('student');
-studentUI.button.render();
-studentUI.dialog.show();
