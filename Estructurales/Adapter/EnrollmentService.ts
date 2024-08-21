@@ -13,5 +13,6 @@ export class EnrollmentService {
 
         // Notificación de inscripción exitosa
         this.notificationManager.notifyByEmail('Tu inscripción al curso Patrones de Diseño fue exitosa', studentEmail);
+        this.notificationManager.ownNotifybyTelegram('Telegram:Urgente realizar el pago', '54679981232 ');
     }
 }

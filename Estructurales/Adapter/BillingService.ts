@@ -18,6 +18,6 @@ export class BillingService {
 
         // Notificación de vencimiento de pago
         this.notificationManager.notifyByEmail('Tu pago de colegiatura está próximo a vencer', studentEmail);
-        this.externalService.notifyExternalTelegram('5512321498','Urgente pago de colegiatura');
+        this.notificationManager.ownNotifybyTelegram('Telegram: tu inscripción está por vencer', '5564789120')
     }
 }
