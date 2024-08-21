@@ -4,7 +4,7 @@ import { StudentDialog } from "./UIObjects/StudentDialog";
 
 
 
-export class AdminUIFactory implements UIFactory{
+export class StudentUIFactory implements UIFactory{
     public createButton() {
         return new StudentButton()
     }
